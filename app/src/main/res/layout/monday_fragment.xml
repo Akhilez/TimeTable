@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+            android:layout_margin="@dimen/text_margin"
+            android:id="@+id/periods_scrollview"
+            android:scrollbarStyle="insideOverlay"
+            android:scrollbars="none">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:id="@+id/container">
+                <RelativeLayout
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/headingTable"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="5dp">
+
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/t"
+                    android:id="@+id/t1"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/timings" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/list_data"
+                    android:longClickable="true"
+                    android:id="@+id/rl1"
+                    android:layout_below="@+id/t1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/period1"
+                        android:id="@+id/period1"
+                        android:gravity="top|bottom"
+                        android:textSize="26dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_alignParentTop="true" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/background_grey"
+                    android:id="@+id/list_gap1"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_below="@+id/rl1"
+                    android:layout_marginTop="9dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/t"
+                    android:id="@+id/t2"
+                    android:layout_below="@+id/rl1"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/timings" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/list_data"
+                    android:longClickable="true"
+                    android:id="@+id/rl2"
+                    android:layout_below="@+id/t2">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/list_data"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/period2"
+                        android:id="@+id/period2"
+                        android:gravity="top|bottom"
+                        android:textSize="26sp"
+                        android:textIsSelectable="false"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_alignParentTop="true" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/background_grey"
+                    android:id="@+id/list_gap2"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_below="@+id/rl2"
+                    android:layout_marginTop="9dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/t"
+                    android:id="@+id/t3"
+                    android:layout_below="@+id/rl2"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/timings" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/list_data"
+                    android:longClickable="true"
+                    android:id="@+id/rl3"
+                    android:layout_below="@+id/t3">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/period3"
+                        android:id="@+id/period3"
+                        android:gravity="top|bottom"
+                        android:textSize="26sp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginStart="30dp" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/background_grey"
+                    android:id="@+id/list_gap3"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_below="@+id/rl3"
+                    android:layout_marginTop="9dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/t"
+                    android:id="@+id/t4"
+                    android:layout_below="@+id/rl3"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/timings" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/list_data"
+                    android:longClickable="true"
+                    android:id="@+id/rl4"
+                    android:layout_below="@+id/t4">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/list_data"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/period4"
+                        android:id="@+id/period4"
+                        android:gravity="top|bottom"
+                        android:textSize="26sp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_alignParentTop="true" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/background_grey"
+                    android:id="@+id/list_gap4"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_below="@+id/rl4"
+                    android:layout_marginTop="9dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/t"
+                    android:id="@+id/t5"
+                    android:layout_below="@+id/rl4"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/timings" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/list_data"
+                    android:longClickable="true"
+                    android:id="@+id/rl5"
+                    android:layout_below="@+id/t5">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/list_data"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/period5"
+                        android:id="@+id/period5"
+                        android:gravity="top|bottom"
+                        android:textSize="26sp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="22dp"
+                        android:layout_marginEnd="22dp"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/background_grey"
+                    android:id="@+id/list_gap5"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_below="@+id/rl5"
+                    android:layout_marginTop="9dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/t"
+                    android:id="@+id/t6"
+                    android:layout_below="@+id/rl5"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/timings" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/list_data"
+                    android:longClickable="true"
+                    android:id="@+id/rl6"
+                    android:layout_below="@+id/t6">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/period6"
+                        android:id="@+id/period6"
+                        android:gravity="top|bottom"
+                        android:textSize="26sp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_alignParentTop="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/background_grey"
+                    android:id="@+id/list_gap6"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_below="@+id/rl6"
+                    android:layout_marginTop="9dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/t"
+                    android:id="@+id/t7"
+                    android:layout_below="@+id/rl6"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/timings" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/list_data"
+                    android:longClickable="true"
+                    android:id="@+id/rl7"
+                    android:layout_below="@+id/t7">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/list_data"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/period7"
+                        android:id="@+id/period7"
+                        android:gravity="top|bottom"
+                        android:textSize="26sp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="22dp"
+                        android:layout_marginEnd="22dp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/background_grey"
+                    android:id="@+id/list_gap7"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_below="@+id/rl7"
+                    android:layout_marginTop="9dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/t"
+                    android:id="@+id/t8"
+                    android:layout_below="@+id/rl7"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/timings" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/list_data"
+                    android:longClickable="true"
+                    android:id="@+id/rl8"
+                    android:layout_below="@+id/t8">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/list_data"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/period8"
+                        android:id="@+id/period8"
+                        android:gravity="top|bottom"
+                        android:textSize="26sp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_alignParentTop="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/background_grey"
+                    android:id="@+id/list_gap8"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_below="@+id/rl8"
+                    android:layout_marginTop="9dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/t"
+                    android:id="@+id/t9"
+                    android:layout_below="@+id/rl8"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/timings" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/list_data"
+                    android:longClickable="true"
+                    android:id="@+id/rl9"
+                    android:layout_below="@+id/t9">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/list_data"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/period9"
+                        android:id="@+id/period9"
+                        android:gravity="top|bottom"
+                        android:textSize="26sp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_alignParentTop="true" />
+
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/t"
+                    android:id="@+id/t10"
+                    android:layout_below="@+id/rl9"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/timings" />
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/list_data_last"
+                    android:id="@+id/rl10"
+                    android:layout_below="@+id/rl9">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/blank_list"/>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

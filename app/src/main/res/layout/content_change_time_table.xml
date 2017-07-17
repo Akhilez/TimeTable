@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_change_time_table"
+    tools:context="com.homemade.akhilez.timetable.ChangeTimeTable"
+    android:background="@color/background_grey"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="@color/colorPrimary"
+                android:layout_marginTop="6dp"
+                android:id="@+id/preMade"
+                android:clickable="true"
+                android:onClick="goToChoose">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:background="?attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Premade TimeTables"
+                        android:id="@+id/preMadeText"
+                        android:layout_marginTop="16dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="29dp"
+                        android:layout_marginStart="29dp"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="select your college, branch etc."
+                        android:layout_below="@+id/preMadeText"
+                        android:layout_alignLeft="@+id/preMadeText"
+                        android:layout_alignStart="@+id/preMadeText" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="@color/colorPrimary"
+                android:layout_marginTop="6dp"
+                android:id="@+id/relativeLayout3"
+                android:clickable="true"
+                android:onClick="goToMyTables"
+                android:layout_below="@+id/preMade">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:background="?attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="My TimeTables"
+                        android:id="@+id/textView9"
+                        android:layout_marginTop="16dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="29dp"
+                        android:layout_marginStart="29dp"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="all the timetables you have created"
+                        android:id="@+id/textView8"
+                        android:layout_below="@+id/textView9"
+                        android:layout_alignLeft="@+id/textView9"
+                        android:layout_alignStart="@+id/textView9" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="@color/colorPrimary"
+                android:layout_marginTop="6dp"
+                android:layout_below="@+id/relativeLayout3"
+                android:layout_centerHorizontal="true"
+                android:clickable="true"
+                android:id="@+id/relativeLayout4"
+                android:onClick="goToNewTable">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:background="?attr/selectableItemBackground" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Create New TimeTable"
+                        android:id="@+id/textView10"
+                        android:layout_marginTop="16dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="29dp"
+                        android:layout_marginStart="29dp"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="declare subjects, timings and schedule"
+                        android:id="@+id/textView11"
+                        android:layout_below="@+id/textView10"
+                        android:layout_alignLeft="@+id/textView10"
+                        android:layout_alignStart="@+id/textView10" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!--
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="@color/colorPrimary"
+                android:layout_marginTop="6dp"
+                android:layout_below="@+id/relativeLayout4"
+                android:layout_centerHorizontal="true"
+                android:clickable="true"
+                android:id="@+id/relativeLayout11"
+                android:onClick="goToEditSubjects">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:background="?attr/selectableItemBackground" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Subjects"
+                        android:id="@+id/textView11"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="29dp"
+                        android:layout_marginStart="29dp"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/relativeLayout11"
+                android:layout_centerHorizontal="true"
+                android:background="@color/colorPrimary"
+                android:layout_marginTop="6dp"
+                android:id="@+id/relativeLayout5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Section"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginStart="19dp"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sec_edit"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary"
+                android:layout_below="@+id/relativeLayout5"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp"
+                android:id="@+id/relativeLayout6">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Branch"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginStart="19dp"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/branch_edit"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp"
+                android:layout_below="@+id/relativeLayout6"
+                android:id="@+id/relativeLayout7">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Year"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginStart="19dp"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/year_edit"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:inputType="number"
+                    android:ems="10"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp"
+                android:layout_below="@+id/relativeLayout7"
+                android:id="@+id/relativeLayout8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="College"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginStart="19dp"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/college_edit"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update"
+                android:id="@+id/update4Btn"
+                android:onClick="update4Things"
+                android:background="@color/color3"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:clickable="true"
+                android:textColor="#fff"
+                android:layout_below="@+id/relativeLayout8"
+                android:layout_toLeftOf="@+id/new_preset"
+                android:layout_toStartOf="@+id/new_preset"
+                android:layout_marginRight="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="10dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="save as custom"
+                android:id="@+id/new_preset"
+                android:onClick="newPresetAction"
+                android:background="@color/color3"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:clickable="true"
+                android:textColor="#fff"
+                android:layout_marginRight="27dp"
+                android:layout_marginEnd="27dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignRight="@+id/relativeLayout8"
+                android:layout_alignEnd="@+id/relativeLayout8"
+                android:layout_marginTop="10dp" />
+
+                -->
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
